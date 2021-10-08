@@ -1,4 +1,4 @@
-# node
+# node + TypeScript
 Project node / javascript with local database.<br>
 This project is a simple To-Do
 
