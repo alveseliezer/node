@@ -1,0 +1,19 @@
+
+<link rel="stylesheet" type="text/css" href="/user.css">
+<%- include('../partials/menu.ejs') %> 
+<h3>Insert User</h3>
+<div class="div-form-user">
+    <form class="form-user" action="/user" method="POST">
+        <input type="text" name="name" id="name-user" placeholder="Name">
+        <input type="password" name="password" id="password-user" placeholder="Password">
+    
+        <select id="kind" name="kind">
+            <option value="none"></option>
+            <option value="ADM">ADM</option>
+            <option value="USER">USER</option>
+        </select>
+        <input type="submit" value="Insert User">        
+    </form>
+</div>
+
+<%- include('../partials/footer.ejs') %>  

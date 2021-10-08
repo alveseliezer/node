@@ -1,0 +1,37 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="/task.css">
+    <title>Task List</title>
+</head>
+<body>
+    <%- include('../partials/menu.ejs') %> 
+    <h3>Task List</h3>
+
+    <table class="table">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Initial Date</th>
+        <th>Finish Date</th>
+        <th>Status</th>
+        <th>Days to the End</th>
+        <th>User ID</th>
+        
+        <tbody> 
+            <% for(i=0; i<list_task.length; i++) { %>
+                <tr>
+                    <td><%= list_task[i].id  %></td>
+                    <td><%= list_task[i].name  %></td>
+                    <td><%= list_task[i].description  %></td> 
+                    <td><%= list_task[i].initial_date  %></td> 
+                    <td><%= list_task[i].finish_date  %></td> 
+                    <td><%= list_task[i].status  %></td>
+                    <td><%= list_task[i].calc_date  %></td>
+                    <td><%= list_task[i].user_id  %></td>   
+                    
+                </tr>
+            <% } %>           
+        </tbody>
+    </table>
+
+    <%- include('../partials/footer.ejs') %>  
+</body>

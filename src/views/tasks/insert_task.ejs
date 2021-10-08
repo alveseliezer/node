@@ -1,0 +1,18 @@
+
+<link rel="stylesheet" type="text/css" href="/user.css">
+<%- include('../partials/menu.ejs') %> 
+<h3>Insert Task</h3>
+<div class="div-form-user">
+    <form class="form-user" action="/task" method="POST">
+        <input type="text" name="name" id="name-task" placeholder="Name">
+        <input type="text" name="description" id="description-task" placeholder="Description">
+        <input type="text" name="initial_date" id="initial_date-task" placeholder="Initial Date">
+        <input type="text" name="finish_date" id="finish_date-task" placeholder="Finish Date">
+        <input type="text" name="status" id="status-task" placeholder="Created">
+        <input type="text" name="user_id" id="user_id-task" placeholder="User ID">
+        
+        <input type="submit" value="Insert Task">        
+    </form>
+</div>
+
+<%- include('../partials/footer.ejs') %>  

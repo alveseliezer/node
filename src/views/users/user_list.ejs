@@ -1,0 +1,29 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="/user.css">
+    <title>User List</title>
+</head>
+<body>
+    <%- include('../partials/menu.ejs') %> 
+    <h3>User List</h3>
+
+    <table class="table">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Kind</th>
+        <th>Task by User</th>
+        
+        <tbody> 
+            <% for(i=0; i<user.length; i++) { %>
+                <tr>
+                    <td><%= user[i].id  %></td>
+                    <td><%= user[i].name  %></td>
+                    <td><%= user[i].kind  %></td> 
+                    <td><input type="button" value="Task By User" class="bt-task-by-user" onclick="location.href='/tasks_by_user/<%=user[i].id %>';"></td> 
+                    
+                </tr>
+            <% } %>           
+        </tbody>
+    </table>
+
+    <%- include('../partials/footer.ejs') %>  
+</body>
